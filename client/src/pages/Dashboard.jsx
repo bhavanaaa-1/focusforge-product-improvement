@@ -29,6 +29,10 @@ export default function Dashboard() {
     );
   };
 
+  const handleTaskDeleted = (deletedId) => {
+    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== deletedId));
+  };
+
   return (
     <div className="dashboard">
       <header>
@@ -40,7 +44,7 @@ export default function Dashboard() {
         <div className="task-section">
           <h2>Task Manager</h2>
           <AddTask onTaskAdded={handleTaskAdded} />
-          <TaskList tasks={tasks} onTaskUpdated={handleTaskUpdated} />
+          <TaskList tasks={tasks} onTaskUpdated={handleTaskUpdated} onTaskDeleted={handleTaskDeleted} />
         </div>
 
         <aside className="sidebar">

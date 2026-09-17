@@ -81,6 +81,23 @@ header {
   color: #94a3b8;
 }
 
+.delete-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
 /* Progress Tracker styles */
 .progress-tracker {
   background-color: #f0f9ff;
